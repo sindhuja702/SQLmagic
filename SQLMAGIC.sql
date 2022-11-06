@@ -23,21 +23,22 @@ VALUES
     (12,"GENTLEMAN","Nani","Nivetha",160,6),
     (12,"Premam","xyz","Nivetha",180,8);
 
+-- Question 3:List Of Movies Watched By User ( Generic way using JOIN )
 -- SELECT * FROM Users JOIN Movie ON Users.id=Movie.id;
 
--- Question 3:List Of Movies Watched By User
+-- Question 3:List Of Movies Watched By User with id 12
 SELECT MovieName FROM Movie WHERE Movie.id=12;
 
--- Question 4:List Of Movies Watched By User and ticketprice is greater than 150
+-- Question 4:List Of Movies Watched By User with id 12 and ticketprice is greater than 150
 SELECT MovieName FROM Movie WHERE Movie.id=12 AND Movie.ticketPrice>150;
 
--- Question 5:List Of Movies Watched By User and movieRating is less than 5
+-- Question 5:List Of Movies Watched By User with id 12 and movieRating is less than 5
 SELECT MovieName FROM Movie WHERE Movie.id=12 AND Movie.MovieRating<5;
 
--- Question 6:List Of Movies Watched By User and where herione repeats more than or equal to 2 times
+-- Question 6:List Of Movies Watched By User with id 12 and where herione repeats more than or equal to 2 times
 SELECT MovieName FROM Movie WHERE Movie.id=12 AND Heroine IN(SELECT Heroine FROM Movie GROUP BY Heroine HAVING COUNT(Heroine)>=2);
 
--- Question 7:Total Amount Spent By User On Movies
+-- Question 7:Total Amount Spent By User with id 12 On Movies
 SELECT SUM(ticketPrice) FROM Movie WHERE Movie.id=12;
 -- Question 7:Average Amount Spent By User1 On Movies
 SELECT AVG(ticketPrice) FROM Movie WHERE Movie.id=12;
