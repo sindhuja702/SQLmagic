@@ -1,1 +1,1 @@
-# SQLmajic
+# SQLmagic
