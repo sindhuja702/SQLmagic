@@ -13,7 +13,7 @@ VALUES
 
 -- Question 2:Creating Movie Table
 CREATE TABLE Movie(id int,MovieName varchar(100),Hero varchar(100),Heroine varchar(100),ticketPrice int,MovieRating int,FOREIGN KEY(id)REFERENCES Users(id));
--- Question 2:adding to the User table
+-- Question 2:Inserting values to the Movie Table
 INSERT INTO Movie(id,MovieName,Hero,Heroine,ticketPrice,MovieRating)
 VALUES
     (12,"SitaRamam","Dulqar","Mrunal",250,10),
@@ -23,8 +23,8 @@ VALUES
     (12,"GENTLEMAN","Nani","Nivetha",160,6),
     (12,"Premam","xyz","Nivetha",180,8);
 
--- Question 3:List Of Movies Watched By User ( Generic way using JOIN )
--- SELECT * FROM Users JOIN Movie ON Users.id=Movie.id;
+-- Question 2: Adding Movies Details to the user table ( Generic way using JOIN )
+SELECT * FROM Users JOIN Movie ON Users.id=Movie.id;
 
 -- Question 3:List Of Movies Watched By User with id 12
 SELECT MovieName FROM Movie WHERE Movie.id=12;
