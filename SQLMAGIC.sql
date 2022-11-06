@@ -40,5 +40,5 @@ SELECT MovieName FROM Movie WHERE Movie.id=12 AND Heroine IN(SELECT Heroine FROM
 
 -- Question 7:Total Amount Spent By User with id 12 On Movies
 SELECT SUM(ticketPrice) FROM Movie WHERE Movie.id=12;
--- Question 7:Average Amount Spent By User1 On Movies
+-- Question 7:Average Amount Spent By User with id 12 On Movies
 SELECT AVG(ticketPrice) FROM Movie WHERE Movie.id=12;
